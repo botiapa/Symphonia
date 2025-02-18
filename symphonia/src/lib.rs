@@ -152,6 +152,8 @@ pub mod default {
         pub use symphonia_codec_adpcm::AdpcmDecoder;
         #[cfg(feature = "alac")]
         pub use symphonia_codec_alac::AlacDecoder;
+        #[cfg(feature = "opus")]
+        pub use symphonia_codec_opus::OpusDecoder;
         #[cfg(feature = "pcm")]
         pub use symphonia_codec_pcm::PcmDecoder;
         #[cfg(feature = "vorbis")]
@@ -256,6 +258,9 @@ pub mod default {
 
         #[cfg(feature = "vorbis")]
         registry.register_all::<codecs::VorbisDecoder>();
+
+        #[cfg(feature = "opus")]
+        registry.register_all::<codecs::OpusDecoder>();
     }
 
     /// Registers all the formats selected by the `feature` flags in the includer's `Cargo.toml` on

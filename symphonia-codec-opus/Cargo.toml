@@ -15,3 +15,4 @@ rust-version = "1.53"
 [dependencies]
 log = "0.4"
 symphonia-core = { version = "0.5.4", path = "../symphonia-core" }
+opus = { git = "https://github.com/Avi-D-coder/opus-rs", rev = "cfdfb04"}
